@@ -1,4 +1,5 @@
 function reverseString(str: String) {
+  // return str == str.split("").reverse().join("");
   let strArr = str.split("");
   let start = 0;
   let end = strArr.length - 1;
