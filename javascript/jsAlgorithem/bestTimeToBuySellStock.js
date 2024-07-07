@@ -1,6 +1,6 @@
 
 function bestTimeBuySellStocks(arr){
-    let maxProfit= 10
+    let maxProfit= 0
     let minPrice = arr[0] || 0
     for(let price of arr){
       if(price < minPrice){

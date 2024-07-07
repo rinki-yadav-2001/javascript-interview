@@ -24,6 +24,6 @@ class Dog extends Animal {
   }
 }
 
-const dog1 = new Dog("american", " golden", 2);
+const dog1 = new Dog("american", "golden", 2);
 console.log(dog1);
 dog1.wagTail();

@@ -20,9 +20,11 @@ const nameList = {
 }
 
 let idArr = Object.entries(idList)
+console.log(idArr)
 
- const newDetails= idArr.map(([_, key])=>{
-  userId = key.id
+ const newDetails= idArr.map(([key, val])=>{
+     console.log(key, val)
+  userId = val.id
 
   const personName =nameList[userId].name.fullName;
   const add = addressObj[userId]

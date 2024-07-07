@@ -3,8 +3,11 @@ function findDuplicateElements(arr) {
   let dupsArr = [];
   for (const element of arr) {
     occurance[element] = (occurance[element] || 0) + 1;
-    if (occurance[element] > 1) {
-      dupsArr.push(element);
+   
+  }
+  for (let key in occurance ){
+       if (occurance[key] >1) {
+      dupsArr.push(+key);
     }
   }
   return dupsArr;
