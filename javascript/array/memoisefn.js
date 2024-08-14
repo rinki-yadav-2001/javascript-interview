@@ -1,13 +1,13 @@
 function memoise(fn) {
-    const cashe = {};
+    const cache = {};
     return function (...args) {
       let key = JSON.stringify(args);
-      if (cashe[key]) {
-        return cashe[key];
+      if (cache[key]) {
+        return cache[key];
         
       }
       const res = fn(...args);
-      cashe[key] = res;
+      cache[key] = res;
       return res;
     };
   }

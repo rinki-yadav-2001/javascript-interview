@@ -1,23 +1,21 @@
-const Url = "https://fakestoreapi.com/products";
+async function fetchData() {
+  const res = await fetch("https://jsonplaceholder.typicode.com/posts");
+  const result = await res.json();
+  renderTable(result);
+}
 
-fetch(Url)
-  .then((response) => response.json())
-  .then((data) => {
-    let rows = "";
-    data.forEach((product) => {
-      rows += `
-              <tr>
-                <td>${product.id}</td>
-                <td>${product.title}</td>
-                <td>${product.description}</td>
-                <td> <img src="${product.image}"/> </td>
-              </tr>
-            `;
-    });
-    const TableBody = document.getElementById("table-body");
+document.getElementById("btn").addEventListener("click", fetchData);
 
-    TableBody.innerHTML = rows;
-  })
-  .catch((error) => {
-    console.error("Error fetching data:", error);
+function renderTable(data) {
+  let rows = "";
+  data.forEach((item) => {
+    rows += `<tr>
+        <td>${item.id}</td>
+        <td>${item.title}</td>
+        <td>${item.body}</td>
+        <td>${item.userId}</td>
+    </tr>`;
   });
+  const tableBody = document.getElementById("tbody");
+  tableBody.innerHTML = rows;
+}
