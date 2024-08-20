@@ -15,6 +15,7 @@ function handleForm(e){
     emailError.textContent = '';
     passwordError.textContent = '';
     confirmPasswordError.textContent = '';
+    document.getElementById('formSuccess').textContent='';
     const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     const emailValue= emailInput.value.trim()
 

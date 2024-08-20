@@ -1,0 +1,38 @@
+/* styles.css */
+.accordion {
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    overflow: hidden;
+  }
+  
+  .accordion-item {
+    border-bottom: 1px solid #ccc;
+  }
+  
+  .accordion-header {
+    background-color: #f1f1f1;
+    padding: 15px;
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: bold;
+    margin: 0;
+  }
+  
+  .accordion-content {
+    display: none; /* Hide by default */
+    padding: 15px;
+    background-color: #fff;
+  }
+  
+  .accordion-content p {
+    margin: 0;
+  }
+  
+  /* Show the content when the accordion-item has the active class */
+  .accordion-item.active .accordion-content {
+    display: block;
+  }
+  
